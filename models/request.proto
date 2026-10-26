@@ -1,0 +1,35 @@
+syntax = "proto2";
+
+package ledwalld;
+
+message Request {
+    enum Action {
+        TEXT = 1;
+	    PICTURE = 2;
+        GIF = 3;
+        VIDEO = 4;
+        CANCEL = 5;
+    }
+
+    required Action action = 1;
+    required string sender = 2;
+
+    optional TextRequest textRequest = 3;
+    optional PictureRequest pictureRequest = 4;
+    optional GifRequest gifRequest = 5;
+    optional VideoRequest videoRequest = 6;
+}
+
+message TextRequest {
+    required string text = 1;
+}
+
+message PictureRequest {
+}
+
+message GifRequest {
+    required bytes gif = 1;
+}
+
+message VideoRequest {
+}
