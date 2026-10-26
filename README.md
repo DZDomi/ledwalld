@@ -69,3 +69,7 @@ sudo ./ledwalld
 ```
 
 `make` generates the protobuf sources from `models/request.proto`, so they always match the installed protobuf version. Run the binary from the repository root so it can find `fonts/8x13.bdf`. It needs root to access the GPIO pins.
+
+## License
+
+ledwalld is licensed under the [GNU General Public License v2.0 or later](LICENSE), matching the [rpi-rgb-led-matrix](https://github.com/hzeller/rpi-rgb-led-matrix) library it links against.
